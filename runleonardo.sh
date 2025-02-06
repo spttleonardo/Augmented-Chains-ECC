@@ -57,11 +57,11 @@ for nf in ${nfactors[*]}; do
 		d=`echo $dd|cut -d: -f1`
   		minSupportConcetps=`echo $dd|cut -d: -f2`
                 echo "=== iniciando $d$fold"
-              	train_file="/home/mauriferrandin/mlds/5-fold/${d}/${d}_train_${fold}"
-                test_file="/home/mauriferrandin/mlds/5-fold/${d}/${d}_test_${fold}"
+              	train_file="/home/leonardo/mlds/5-fold/${d}/${d}_train_${fold}"
+                test_file="/home/leonardo/mlds/5-fold/${d}/${d}_test_${fold}"
 		df
 		free -g                                       
-		/home/mauriferrandin/R/R-4.0.4/bin/Rscript script_leonardo.R $train_file $test_file $nf $c $cores > "log-${d}-fold-${fold}-${c}-${nf}.out" 2>&1 &
+		/home/leonardo/R/R-4.0.4/bin/Rscript script_leonardo.R $train_file $test_file $nf $c $cores > "log-${d}-fold-${fold}-${c}-${nf}.out" 2>&1 &
 					
 		sleep 15
         	par=`ps auxwww|grep script_leonardo.R|grep -v grep|wc -l`
