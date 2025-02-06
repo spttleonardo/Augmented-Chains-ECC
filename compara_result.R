@@ -42,24 +42,12 @@ cs = c("ECC",
 
 
 # diretório onde se encontra o csv com os dados
-#input_dir <- "/home/mauri/Downloads/leonardo2/logs/"
-#input_dir <- "/home/mauri/Downloads/leonardonb/logs/"
-input_dir <- "/home/mauri/Downloads/leonardoornb/logs/"
-#input_dir <- "/home/mauri/Downloads/leonardoknn1/logs/"
-#input_dir <- "/home/mauri/Downloads/leonardoorsvm/logs/"
-#input_dir <- "/home/mauri/Downloads/leonardosvm/logs/"
-#input_dir <- "/home/mauri/Downloads/leonardoor/logs/" 
+input_dir <- "/home/leonardo/Downloads/leonardoornb/logs/"
 setwd(input_dir)
 
 # diretorio onde serão gravados os resultados
+output_dir <- "/home/leonardo/Downloads/leonardoornb/results/"
 
-#output_dir <- "/home/mauri/Downloads/leonardo2/results/"
-#output_dir <- "/home/mauri/Downloads/leonardonb/results/"
-output_dir <- "/home/mauri/Downloads/leonardoornb/results/"
-#output_dir <- "/home/mauri/Downloads/leonardoknn1/results/"
-#output_dir <- "/home/mauri/Downloads/leonardosvm/results/" 
-#output_dir <- "/home/mauri/Downloads/leonardoorsvm/results/" 
-#output_dir <- "/home/mauri/Downloads/leonardoor/results/"
 
 todoscomtodos <- function(n){
   ret <- list()
