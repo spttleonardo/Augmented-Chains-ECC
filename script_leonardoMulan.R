@@ -146,10 +146,10 @@ calculaAUCPR <- function(pred_puro, dslabte){
   write.csv(x = pred_puro, file = paste("pred", csvsufix, sep = ""), row.names = F)
   write.csv(x = dslabte, file = paste("true", csvsufix, sep = ""), row.names = F)
   
-  pyprog <- "/home/mauri/PycharmProjects/auprc/auprc.py"
-  cmd <- paste("/home/mauri/cudalocal/python-3.9.16/bin/python3", pyprog, paste("true", csvsufix, sep = ""), paste("pred", csvsufix, sep = ""), sep=" ")
+  pyprog <- "/home/leonardo/PycharmProjects/auprc/auprc.py"
+  cmd <- paste("/home/leonardo/cudalocal/python-3.9.16/bin/python3", pyprog, paste("true", csvsufix, sep = ""), paste("pred", csvsufix, sep = ""), sep=" ")
   
-  #pyprog <- "/home/mauriferrandin/tools/auprcpython/auprc.py"
+  #pyprog <- "/home/leonardo/tools/auprcpython/auprc.py"
   #cmd <- paste("python3 ", pyprog, paste("true", csvsufix, sep = ""), paste("pred", csvsufix, sep = ""), sep=" ")
 
   print(cmd)
@@ -220,18 +220,18 @@ chainsECCMulan <- function (nds_train, lbl_names, m = 10, seed = 1){
 }
 
 
-train_file<-"/home/mauri/Downloads/mlds/5-fold/birds/birds_train_2"
-test_file <-"/home/mauri/Downloads/mlds/5-fold/birds/birds_test_2"
-train_file<-"/home/mauri/Downloads/mlds/5-fold/yeast/yeast_train_2"
-test_file <-"/home/mauri/Downloads/mlds/5-fold/yeast/yeast_test_2"
+train_file<-"/home/leonardo/Downloads/mlds/5-fold/birds/birds_train_2"
+test_file <-"/home/leonardo/Downloads/mlds/5-fold/birds/birds_test_2"
+train_file<-"/home/leonardo/Downloads/mlds/5-fold/yeast/yeast_train_2"
+test_file <-"/home/leonardo/Downloads/mlds/5-fold/yeast/yeast_test_2"
 
 
 nfactor = 1.5
 cl = "MLTB"
 cores = 1
 
-mulan <- "/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin/java  -Xmx32g -jar /home/mauri/Downloads/DownOlds/mulan/mymulanexec.jar"
-mulan <- "/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin/java  -Xmx32g -jar /home/mauri/Downloads/mymulanexecute.jar"
+mulan <- "/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin/java  -Xmx32g -jar /home/leonardo/Downloads/DownOlds/mulan/mymulanexec.jar"
+mulan <- "/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin/java  -Xmx32g -jar /home/leonardo/Downloads/mymulanexecute.jar"
 dir <- tempdir()
 setwd(dir)
 
